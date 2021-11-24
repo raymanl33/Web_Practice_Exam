@@ -14,7 +14,10 @@ app.get("/", (req, res) => {
 
 app.post('/homepage', (req, res) => {
   console.log(req.body)
-  res.render('homepage')
+  res.render('homepage', {
+    user: req.body.name,
+    aboutme: req.body.aboutme
+  })
 });
 
 app.get("/people/:id", (req, res) => {
