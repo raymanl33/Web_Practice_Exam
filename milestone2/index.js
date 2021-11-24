@@ -12,6 +12,10 @@ app.get("/", (req, res) => {
   res.render("createcard");
 });
 
+app.post('/homepage', (req, res) => {
+  console.log(req.body)
+  res.render('homepage')
+});
 
 app.get("/people/:id", (req, res) => {
   res.render("people");
