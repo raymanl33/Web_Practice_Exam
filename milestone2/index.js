@@ -16,7 +16,8 @@ app.post('/homepage', (req, res) => {
   console.log(req.body)
   res.render('homepage', {
     user: req.body.name,
-    aboutme: req.body.aboutme
+    aboutme: req.body.aboutme,
+    favBook: req.body.FavBooks
   })
 });
 
